@@ -1,5 +1,5 @@
-﻿using Application.Day1;
-using Application.Interfaces;
+﻿using Application.Interfaces;
+using Application.Solvers;
 using Infrastructure;
 using System;
 
