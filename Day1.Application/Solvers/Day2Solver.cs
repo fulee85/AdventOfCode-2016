@@ -10,17 +10,21 @@ namespace Application.Solvers
         public Solution GetSolution(IInput input)
         {
             var keypad = new Keypad();
-            var result = new StringBuilder();
+            var specialKeypad = new SpecialKeypad();
+            var result1 = new StringBuilder();
+            var result2 = new StringBuilder();
             foreach (var line in input.GetLines())
             {
                 foreach (var character in line)
                 {
                     keypad.Move(character);
+                    specialKeypad.Move(character);
                 }
-                result.Append(keypad.GetNumber());
+                result1.Append(keypad.GetCode());
+                result2.Append(specialKeypad.GetCode());
             }
 
-            return new Solution(firstPart: result.ToString());
+            return new Solution(firstPart: result1, secondPart: result2);
         }
     }
 }

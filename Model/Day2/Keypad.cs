@@ -2,12 +2,19 @@
 {
     public class Keypad
     {
-        private readonly int[,] keypad = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-        private int RowPosition = 1, ColumnPosition = 1;
+        protected char[,] keypad;
+        protected int rowPosition, columnPosition;
 
-        public int GetNumber()
+        public Keypad()
         {
-            return keypad[RowPosition, ColumnPosition];
+            keypad = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
+            rowPosition = 1; 
+            columnPosition = 1;
+        }
+
+        public char GetCode()
+        {
+            return keypad[rowPosition, columnPosition];
         }
 
         public void Move(char ch)
@@ -31,35 +38,35 @@
             }
         }
 
-        private void MoveRight()
+        protected virtual void MoveRight()
         {
-            if (ColumnPosition < 2)
+            if (columnPosition < 2)
             {
-                ColumnPosition++;
+                columnPosition++;
             }
         }
 
-        private void MoveLeft()
+        protected virtual void MoveLeft()
         {
-            if (ColumnPosition > 0)
+            if (columnPosition > 0)
             {
-                ColumnPosition--;
+                columnPosition--;
             }
         }
 
-        private void MoveDown()
+        protected virtual void MoveDown()
         {
-            if (RowPosition < 2)
+            if (rowPosition < 2)
             {
-                RowPosition++;
+                rowPosition++;
             }
         }
 
-        private void MoveUp()
+        protected virtual void MoveUp()
         {
-            if (RowPosition > 0)
+            if (rowPosition > 0)
             {
-                RowPosition--;
+                rowPosition--;
             }
         }
     }
