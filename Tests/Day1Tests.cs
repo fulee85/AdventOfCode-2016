@@ -1,11 +1,11 @@
-using Application.Day1;
+using Application.Solvers;
 using FluentAssertions;
 using Tests.Utilities;
 using Xunit;
 
 namespace Tests
 {
-    public class Day1
+    public class Day1Tests
     {
         [Fact]
         public void TestPartOne1()

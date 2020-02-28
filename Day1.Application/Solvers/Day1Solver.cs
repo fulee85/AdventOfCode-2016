@@ -1,7 +1,7 @@
 ﻿using Application.Interfaces;
 using Model.Day1;
 
-namespace Application.Day1
+namespace Application.Solvers
 {
     public class Day1Solver : ISolver
     {
