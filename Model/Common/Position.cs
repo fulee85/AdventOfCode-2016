@@ -1,4 +1,4 @@
-﻿namespace Model.Day1
+﻿namespace Model.Common
 {
     public class Position
     {

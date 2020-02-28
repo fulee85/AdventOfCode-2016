@@ -17,5 +17,13 @@ UUUUD");
             Day2Solver solution = new Day2Solver();
             solution.GetSolution(input).FirstPart.Should().Be("1985");
         }
+
+        [Fact]
+        public void TestPartOne2()
+        {
+            StringInput input = new StringInput(@"U");
+            Day2Solver solution = new Day2Solver();
+            solution.GetSolution(input).FirstPart.Should().Be("2");
+        }
     }
 }

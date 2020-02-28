@@ -1,4 +1,5 @@
-﻿using Model.Exceptions;
+﻿using Model.Common;
+using Model.Exceptions;
 using System;
 using System.Collections.Generic;
 
