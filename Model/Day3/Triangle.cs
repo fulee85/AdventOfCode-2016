@@ -2,9 +2,11 @@
 {
     public static class Triangle
     {
-        public static bool IsValid(int a, int b, int c)
+        private static bool IsValid(int a, int b, int c)
         {
             return a + b > c && a + c > b && b + c > a;
         }
+
+        public static bool IsValid(params int[] sides) => IsValid(sides[0], sides[1], sides[2]);
     }
 }
