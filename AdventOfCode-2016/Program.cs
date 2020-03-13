@@ -13,7 +13,8 @@ namespace AdventOfCode_2016
         static void Main(string[] args)
         {
             //RunSolver(new Day1Solver(), new FileInput("Inputs/input1.txt"));
-            RunSolver(new Day2Solver(), new FileInput("Inputs/input2.txt"));
+            //RunSolver(new Day2Solver(), new FileInput("Inputs/input2.txt"));
+            RunSolver(new Day3Solver(), new FileInput("Inputs/input3.txt"));
         }
 
         private static void RunSolver(ISolver solver, IInput input)
